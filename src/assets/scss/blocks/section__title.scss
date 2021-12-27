@@ -1,0 +1,28 @@
+.section__title {
+  font: $section-title-font;
+  letter-spacing: 5px;
+  color: $light-color;
+  text-transform: uppercase;
+
+  &--dark {
+    color: $dark-color;
+  }
+
+  &--gold {
+    color: $gold-color;
+  }
+}
+
+.underline__title {
+  position: relative;
+}
+
+.underline__title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: $red-color;
+}

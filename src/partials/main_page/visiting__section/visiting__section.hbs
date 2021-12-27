@@ -1,0 +1,59 @@
+<section class="visiting__section" id="visiting">
+
+  <div class="container visiting__container">
+    <h2 class="section__title section__title--gold underline__title">
+      Virtual tour
+    </h2>
+    <!-- /.section__title -->
+
+    <div class="cards__section">
+
+      {{! Data is retrieved from src.data}}
+      {{#with visiting__cards}}
+
+      {{#if first__card}}
+      {{> visiting__card first__card}}
+      {{else}}
+      <p>Visiting cards first card folder is empty</p>
+      {{/if}}
+
+      {{#if second__card}}
+      {{> visiting__card second__card}}
+      {{else}}
+      <p>Visiting cards second card folder is empty</p>
+      {{/if}}
+
+      {{#if third__card}}
+      {{> visiting__card third__card}}
+      {{else}}
+      <p>Visiting cards third card folder is empty</p>
+      {{/if}}
+
+      {{#if fourth__card}}
+      {{> visiting__card fourth__card}}
+      {{else}}
+      <p>Visiting cards fourth card folder is empty</p>
+      {{/if}}
+
+      {{#if fifth__card}}
+      {{> visiting__card fifth__card}}
+      {{else}}
+      <p>Visiting cards fifth card folder is empty</p>
+      {{/if}}
+
+      {{#if sixth__card}}
+      {{> visiting__card sixth__card}}
+      {{else}}
+      <p>Visiting cards sixth card folder is empty</p>
+      {{/if}}
+
+      {{/with}}
+
+    </div>
+    <!-- /.cards__section -->
+
+  </div>
+  <!-- /.container visiting__container -->
+
+</section>
+<!-- /.visiting__section -->

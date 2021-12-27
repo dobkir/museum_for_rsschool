@@ -1,0 +1,84 @@
+<section class="tickets__section" id="tickets">
+
+  <div class="container tickets__container">
+    <h2 class="section__title section__title--gold underline__title">
+      Buy Tickets
+    </h2>
+    <!-- /.section__title -->
+
+    <div class="tickets__section--main">
+
+      <form class="tickets__section--form">
+
+        <fieldset class="ticket-type__field">
+
+          <legend class="ticket-type__legend">Ticket Type</legend>
+
+          <label class="ticket__type--label" for="ticket__type-1">
+            <input id="ticket__type-1" type="radio" checked="checked" name="ticket__type">
+            <span class="radio-button"></span>
+            Permanent exhibition
+          </label>
+
+          <label class="ticket__type--label" for="ticket__type-2">
+            <input id="ticket__type-2" type="radio" name="ticket__type">
+            <span class="radio-button"></span>
+            Temporary exhibition</label>
+          <label class="ticket__type--label" for="ticket__type-3">
+            <input id="ticket__type-3" type="radio" name="ticket__type">
+            <span class="radio-button"></span>
+            Combined Admission
+          </label>
+
+        </fieldset>
+        <!-- /.ticket-type__field -->
+
+        <fieldset class="ticket-amount__field">
+
+          <legend class="ticket-type__legend">Amount</legend>
+
+          <label class="ticket-amount--label" for="ticket-amount__number-1">Basic 18+</label>
+
+          <div class="ticket-amount__choosing">
+            <button class="ticket-amount__button" type="button" onclick="this.nextElementSibling.stepDown()">—</button>
+            <input class="ticket-amount__number" id="ticket-amount__number-1" type="number" name="amount__number"
+              min="0" max="20" value="1" readonly>
+            <button class="ticket-amount__button" type="button"
+              onclick="this.previousElementSibling.stepUp()">+</button>
+          </div>
+          <!-- /.ticket-amount__choosing -->
+
+          <label class="ticket-amount--label" for="ticket-amount__number-2">Senior 65+</label>
+
+          <div class="ticket-amount__choosing">
+            <button class="ticket-amount__button" type="button" onclick="this.nextElementSibling.stepDown()">—</button>
+            <input class="ticket-amount__number" id="ticket-amount__number-2" type="number" name="amount__number"
+              min="0" max="20" value="1" readonly>
+            <button class="ticket-amount__button" type="button"
+              onclick="this.previousElementSibling.stepUp()">+</button>
+          </div>
+          <!-- /.ticket-amount__choosing -->
+
+          <p class="tickets__total-price">
+            Total
+            <output name="total__price">€220</output>
+          </p>
+          <!-- /.tickets__total-price -->
+
+          <input class="send__ticket-types" type="button" value="Buy Now">
+        </fieldset>
+        <!-- /.ticket-amount__field -->
+
+      </form>
+      <!-- /.ticket-type__form -->
+
+    </div>
+    <!-- /.tickets__section-main -->
+
+  </div>
+  <!-- /.container tickets__container -->
+
+  <div class="panorama-parallax"></div>
+  <!-- /.panorama-parallax -->
+</section>
+<!-- /.tickets__section -->

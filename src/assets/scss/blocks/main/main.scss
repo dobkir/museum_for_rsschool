@@ -1,0 +1,17 @@
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: minmax(280px, 1920px);
+  grid-template-rows: 810px 1266px 865px 1396px 2200px 1294px 962px;
+  grid-template-areas:
+    "welcome__section"
+    "visiting__section"
+    "explore__section"
+    "video__section"
+    "gallery__section"
+    "tickets__section"
+    "contacts__section";
+  margin: 0 auto;
+
+  background-color: $light-color;
+}

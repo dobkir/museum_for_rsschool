@@ -1,0 +1,72 @@
+@import "vars";
+@import "vendor/reset";
+
+body {
+	background-color: $gray-color;
+}
+
+.body__container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 150px 8792px 392px;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: $light-color;
+
+	cursor: pointer;
+
+	transition: all 0.4s linear;
+
+	&:hover,
+	&:focus {
+		color: $gold-color;
+	}
+
+	&:active {
+		color: $dark-gold-color;
+	}
+}
+
+.dark__link {
+	color: $dark-color;
+}
+
+.golden__link {
+	color: #caaa7d;
+}
+
+/* Blocks */
+
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/section__title.scss";
+@import "blocks/btn.scss";
+@import "blocks/progress-bar.scss";
+@import "blocks/social__icon";
+@import "blocks/main/main.scss";
+@import "blocks/main/welcome__section.scss";
+@import "blocks/main/visiting__section.scss";
+@import "blocks/main/explore__section.scss";
+@import "blocks/main/video__section.scss";
+@import "blocks/main/gallery__section.scss";
+@import "blocks/main/tickets__section.scss";
+@import "blocks/main/contacts__section.scss";
+@import "blocks/footer.scss";
+@import "blocks/tour.scss";

@@ -1,0 +1,75 @@
+.visiting__section {
+  grid-area: visiting__section;
+  margin-top: -150px;
+
+  border-top: 150px solid transparent;
+  background-clip: padding-box;
+}
+
+.visiting__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 75px 0;
+}
+
+.cards__section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 75px 60px;
+  margin-top: 100px;
+}
+
+.visiting__card {
+  width: 440px;
+  height: 424px;
+
+  &--link {
+    display: block;
+
+    overflow: hidden;
+
+    &:hover+.visiting__card--description h3::after {
+      width: 100%;
+    }
+  }
+
+  &--img {
+    transition: all 0.8s ease-in-out;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+      transform: scale(1.2);
+    }
+  }
+
+  &--description {
+    padding-top: 30px;
+  }
+
+  &--title {
+    font: $section-subtitle-font;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &.underline__title::after {
+      width: 300px;
+
+      bottom: -10px;
+
+      transition: all 0.8s linear;
+    }
+  }
+
+  &--text {
+    margin-top: 10px;
+    padding: 10px 10px 10px 0;
+
+    font: $section-thin-text-font;
+  }
+
+  &--minitext {
+    font: $section-extrathin-text-font;
+  }
+}
