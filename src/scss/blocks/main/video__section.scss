@@ -25,7 +25,7 @@
     height: 735px;
     margin: 75px 0 40px;
 
-    background-image: url("../video/poster0.jpg");
+    background-image: url("../assets/video/poster0.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 100%;
@@ -42,7 +42,7 @@
       height: 220px;
       margin: auto;
 
-      background-image: url("../img/svg/play-button_big.svg");
+      background-image: url("../assets/img/svg/play-button_big.svg");
       background-repeat: no-repeat;
     }
 
@@ -78,7 +78,7 @@
       width: 23px;
       height: 31px;
 
-      background-image: url("../img/svg/control_play.svg");
+      background-image: url("../assets/img/svg/control_play.svg");
       background-repeat: no-repeat;
     }
 
@@ -92,7 +92,7 @@
       width: 35px;
       height: 35px;
 
-      background-image: url("../img/svg/control_fullscreen.svg");
+      background-image: url("../assets/img/svg/control_fullscreen.svg");
       background-repeat: no-repeat;
     }
   }

@@ -43,9 +43,9 @@ sans-serif,
   }
 }
 
-@include font("RobotoThin", normal, 100, "../fonts/RobotoThin.woff");
-@include font("RobotoLight", normal, 300, "../fonts/RobotoLight.woff");
-@include font("RobotoRegular", normal, 400, "../fonts/RobotoRegular.woff");
-@include font("RobotoMedium", normal, 500, "../fonts/RobotoMedium.woff");
-@include font("RobotoBold", normal, 700, "../fonts/RobotoBold.woff");
-@include font("Forum", normal, 400, "../fonts/Forum.woff");
+@include font("RobotoThin", normal, 100, "../assets/fonts/RobotoThin.woff");
+@include font("RobotoLight", normal, 300, "../assets/fonts/RobotoLight.woff");
+@include font("RobotoRegular", normal, 400, "../assets/fonts/RobotoRegular.woff");
+@include font("RobotoMedium", normal, 500, "../assets/fonts/RobotoMedium.woff");
+@include font("RobotoBold", normal, 700, "../assets/fonts/RobotoBold.woff");
+@include font("Forum", normal, 400, "../assets/fonts/Forum.woff");

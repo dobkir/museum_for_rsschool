@@ -27,34 +27,34 @@ const distPath = "dist/";
 const path = {
     build: {
         html: distPath,
-        js: distPath + "assets/js/",
-        css: distPath + "assets/css/",
+        js: distPath + "js/",
+        css: distPath + "css/",
         img: distPath + "assets/img/",
         fonts: distPath + "assets/fonts/",
         video: distPath + "assets/video/"
     },
     src: {
-        html: srcPath + "*.{html,hbs,handlebars}",
-        js: srcPath + "assets/js/*.js",
-        css: srcPath + "assets/scss/*.scss",
+        html: srcPath + "html/pages/**/*.{html,hbs,handlebars}",
+        js: srcPath + "js/*.js",
+        css: srcPath + "scss/*.scss",
         img: srcPath + "assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-        video: srcPath + "assets/video/**/*.{jpg, mp4}"
+        video: srcPath + "assets/video/**/*.{jpg, mp4, webm}"
     },
     watch: {
-        html: srcPath + "**/*.{html,hbs,handlebars}",
-        js: srcPath + "assets/js/**/*.js",
-        css: srcPath + "assets/scss/**/*.scss",
+        html: srcPath + "html/**/*.{html,hbs,handlebars}",
+        js: srcPath + "js/**/*.js",
+        css: srcPath + "scss/**/*.scss",
         img: srcPath + "assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-        video: srcPath + "assets/video/**/*.{jpg, mp4}"
+        video: srcPath + "assets/video/**/*.{jpg, mp4, webm}"
     },
     clean: "./" + distPath
 }
 
 /* Tasks */
 
-function serve() {
+function server() {
     browserSync.init({
         server: {
             baseDir: "./" + distPath
@@ -64,14 +64,14 @@ function serve() {
 
 function html(cb) {
     panini.refresh();
-    return src(path.src.html, { base: srcPath })
+    return src(path.src.html, { base: srcPath + "html/pages/" })
         .pipe(plumber())
         .pipe(panini({
-            root: srcPath,
-            layouts: srcPath + "layouts/",
-            partials: srcPath + "partials/",
-            helpers: srcPath + "helpers/",
-            data: srcPath + "data/"
+            root: srcPath + "html/pages/",
+            layouts: srcPath + "html/layouts/",
+            partials: srcPath + "html/partials/",
+            helpers: srcPath + "html/helpers/",
+            data: srcPath + "html/data/"
         }))
         .pipe(dest(path.build.html))
         .pipe(browserSync.reload({ stream: true }));
@@ -80,7 +80,7 @@ function html(cb) {
 }
 
 function css(cb) {
-    return src(path.src.css, { base: srcPath + "assets/scss/" })
+    return src(path.src.css, { base: srcPath + "scss/" })
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -116,7 +116,7 @@ function css(cb) {
 }
 
 function cssWatch(cb) {
-    return src(path.src.css, { base: srcPath + "assets/scss/" })
+    return src(path.src.css, { base: srcPath + "scss/" })
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -140,7 +140,7 @@ function cssWatch(cb) {
 }
 
 function js(cb) {
-    return src(path.src.js, { base: srcPath + "assets/js/" })
+    return src(path.src.js, { base: srcPath + "js/" })
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -175,7 +175,7 @@ function js(cb) {
 }
 
 function jsWatch(cb) {
-    return src(path.src.js, { base: srcPath + "assets/js/" })
+    return src(path.src.js, { base: srcPath + "js/" })
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -253,7 +253,7 @@ function watchFiles() {
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, img, fonts, video));
-const watch = gulp.parallel(build, watchFiles, serve);
+const watch = gulp.parallel(build, watchFiles, server);
 
 /* Exports Tasks */
 exports.html = html;
