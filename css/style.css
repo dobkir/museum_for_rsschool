@@ -2,42 +2,42 @@
     font-family: "RobotoThin";
     font-style: normal;
     font-weight: 100;
-    src: url("../fonts/RobotoThin.woff") format("woff");
+    src: url("../assets/fonts/RobotoThin.woff") format("woff");
 }
 
 @font-face {
     font-family: "RobotoLight";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/RobotoLight.woff") format("woff");
+  src: url("../assets/fonts/RobotoLight.woff") format("woff");
 }
 
 @font-face {
     font-family: "RobotoRegular";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/RobotoRegular.woff") format("woff");
+  src: url("../assets/fonts/RobotoRegular.woff") format("woff");
 }
 
 @font-face {
     font-family: "RobotoMedium";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/RobotoMedium.woff") format("woff");
+  src: url("../assets/fonts/RobotoMedium.woff") format("woff");
 }
 
 @font-face {
     font-family: "RobotoBold";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/RobotoBold.woff") format("woff");
+  src: url("../assets/fonts/RobotoBold.woff") format("woff");
 }
 
 @font-face {
     font-family: "Forum";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Forum.woff") format("woff");
+  src: url("../assets/fonts/Forum.woff") format("woff");
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -607,7 +607,7 @@ a:active {
     z-index: 3;
     width: 38px;
     height: 31px;
-    background-image: url("../img/svg/control_sound.svg");
+    background-image: url("../assets/img/svg/control_sound.svg");
     background-repeat: no-repeat;
 }
 
@@ -660,23 +660,23 @@ a:active {
 }
 
 .social__icon.youtube {
-    -webkit-mask-image: url("../img/svg/social/youtube__icon.svg");
+    -webkit-mask-image: url("../assets/img/svg/social/youtube__icon.svg");
 }
 
 .social__icon.instagram {
-    -webkit-mask-image: url("../img/svg/social/instagram__icon.svg");
+    -webkit-mask-image: url("../assets/img/svg/social/instagram__icon.svg");
 }
 
 .social__icon.facebook {
-    -webkit-mask-image: url("../img/svg/social/facebook__icon.svg");
+    -webkit-mask-image: url("../assets/img/svg/social/facebook__icon.svg");
 }
 
 .social__icon.twitter {
-    -webkit-mask-image: url("../img/svg/social/twitter__icon.svg");
+    -webkit-mask-image: url("../assets/img/svg/social/twitter__icon.svg");
 }
 
 .social__icon.pinterest {
-    -webkit-mask-image: url("../img/svg/social/pinterest__icon.svg");
+    -webkit-mask-image: url("../assets/img/svg/social/pinterest__icon.svg");
 }
 
 .main {
@@ -727,7 +727,7 @@ a:active {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-    background-image: url("../img/welcome-slider/1.jpg");
+    background-image: url("../assets/img/welcome-slider/1.jpg");
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) calc(100% - 60px);
 }
@@ -928,7 +928,7 @@ a:active {
     flex-basis: 50%;
     width: 700px;
     height: 700px;
-    background-image: url("../img/explore-slider/before.jpg");
+    background-image: url("../assets/img/explore-slider/before.jpg");
     background-repeat: no-repeat;
     background-position: 100% 100%;
 }
@@ -940,7 +940,7 @@ a:active {
     content: "";
     width: 280px;
     height: 100%;
-    background-image: url("../img/explore-slider/after.jpg");
+    background-image: url("../assets/img/explore-slider/after.jpg");
     background-repeat: no-repeat;
     background-position: 100% 100%;
 }
@@ -996,7 +996,7 @@ a:active {
     width: 100%;
     height: 735px;
     margin: 75px 0 40px;
-    background-image: url("../video/poster0.jpg");
+    background-image: url("../assets/video/poster0.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 100%;
@@ -1012,7 +1012,7 @@ a:active {
     width: 220px;
     height: 220px;
     margin: auto;
-    background-image: url("../img/svg/play-button_big.svg");
+    background-image: url("../assets/img/svg/play-button_big.svg");
     background-repeat: no-repeat;
 }
 
@@ -1043,7 +1043,7 @@ a:active {
     z-index: 3;
     width: 23px;
     height: 31px;
-    background-image: url("../img/svg/control_play.svg");
+    background-image: url("../assets/img/svg/control_play.svg");
     background-repeat: no-repeat;
 }
 
@@ -1055,7 +1055,7 @@ a:active {
     z-index: 3;
     width: 35px;
     height: 35px;
-    background-image: url("../img/svg/control_fullscreen.svg");
+    background-image: url("../assets/img/svg/control_fullscreen.svg");
     background-repeat: no-repeat;
 }
 
@@ -1211,7 +1211,7 @@ a:active {
     width: 100%;
     height: 100%;
     margin-top: 105px;
-    background-image: url("../img/tickets__section/tickets__section-main-bg.jpg");
+    background-image: url("../assets/img/tickets__section/tickets__section-main-bg.jpg");
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 50% 100%;
@@ -1241,7 +1241,7 @@ a:active {
 .panorama-parallax {
     width: 100%;
     min-height: 400px;
-    background-image: url("../img/tickets__section/parallax.jpg");
+    background-image: url("../assets/img/tickets__section/parallax.jpg");
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: cover;
